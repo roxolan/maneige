@@ -47,8 +47,13 @@
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{3f0f68d1-03df-4ba6-990e-08ce2ea1af2f}</SharePointProjectItemId>
     </None>
+    <Content Include="app\app.js" />
+    <Content Include="Elements.xml" />
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
+    <None Include="SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{67702304-7099-44af-8452-afd62eeb0519}</SharePointProjectItemId>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-1.9.1.min.map" />
@@ -56,7 +61,6 @@
       <SharePointProjectItemId>{ec004795-d37b-47fe-bdb1-7cf2647f7c41}</SharePointProjectItemId>
     </None>
     <Content Include="Scripts\Elements.xml" />
-    <Content Include="Scripts\App.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

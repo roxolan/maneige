@@ -3,7 +3,7 @@
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
      Name="Maneige"
      ProductID="{3f0f68d1-03df-4ba6-990e-08ce2ea1af2f}"
-     Version="1.0.0.0"
+     Version="0.0.0.1"
      SharePointMinVersion="16.0.0.0"
 >
   <Properties>

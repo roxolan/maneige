@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="4a88333d-dd96-49e7-bf9a-e1a5154f384f" 
+        solutionId="4a88333d-dd96-49e7-bf9a-e1a5154f384f" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="Maneige"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="adf65a61-c28b-428a-8ba5-a73fcdc1135e" />
+  </features>
+</package>

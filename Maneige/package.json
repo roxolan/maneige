@@ -1,0 +1,18 @@
+{
+  "name": "maneige",
+  "version": "0.0.1",
+  "description": "AngularJS-powered Sharepoint-hosted application",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Victor Kotusenko",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.5"
+  }
+}

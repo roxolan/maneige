@@ -43,16 +43,23 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="dist\bundle.js.map" />
     <None Include="packages.config" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{3f0f68d1-03df-4ba6-990e-08ce2ea1af2f}</SharePointProjectItemId>
     </None>
     <Content Include="app\app.js" />
-    <Content Include="Elements.xml" />
-    <Content Include="Pages\Elements.xml" />
+    <Content Include="dist\bundle.js" />
+    <Content Include="Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Pages\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Pages\Default.aspx" />
     <None Include="SharePointProjectItem.spdata">
       <SharePointProjectItemId>{67702304-7099-44af-8452-afd62eeb0519}</SharePointProjectItemId>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -77,7 +84,9 @@
     <Content Include="Images\AppIcon.png">
       <OpcRelationship>manifest-icon</OpcRelationship>
     </Content>
-    <Content Include="Images\Elements.xml" />
+    <Content Include="Images\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Images\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{1a5b3fe8-2cd1-49cc-a4a3-cb70d9e0698d}</SharePointProjectItemId>
     </None>
@@ -100,6 +109,9 @@
     <AppManifestFile Include="AppManifest.xml">
       <SubType>Designer</SubType>
     </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\components\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -2,5 +2,7 @@
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="RootModule">
     <File Path="app\App.js" Url="app/App.js" ReplaceContent="TRUE" />
+    <File Path="dist\bundle.js" Url="dist/bundle.js" ReplaceContent="TRUE" />
+    <File Path="dist\bundle.js.map" Url="dist/bundle.js.map" ReplaceContent="TRUE" />
   </Module>
 </Elements>

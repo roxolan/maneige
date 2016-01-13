@@ -15,7 +15,7 @@
     <!-- Add your CSS styles to the following file -->
     <link rel="Stylesheet" type="text/css" href="../Content/App.css" />
 
-    <script src="../app/app.js"></script>
+    <script src="../dist/bundle.js"></script>
 
 </asp:Content>
 

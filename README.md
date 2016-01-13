@@ -1,2 +1,2 @@
 # maneige
-AngularJS on SharePoint application
+ReactJS on SharePoint application

@@ -3,5 +3,7 @@
   <Files>
     <ProjectItemFile Source="Elements.xml" Type="ElementManifest" />
     <ProjectItemFile Source="app\app.js" Target="app\" Type="ElementFile" />
+    <ProjectItemFile Source="dist\bundle.js" Target="dist\" Type="ElementFile" />
+    <ProjectItemFile Source="dist\bundle.js.map" Target="dist\" Type="ElementFile" />
   </Files>
 </ProjectItem>

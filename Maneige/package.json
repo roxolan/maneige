@@ -1,0 +1,28 @@
+{
+  "name": "maneige",
+  "version": "0.0.1",
+  "description": "ReactJS-inspired SharePoint application",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roxolan/maneige.git"
+  },
+  "author": "Victor Kotusenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roxolan/maneige/issues"
+  },
+  "homepage": "https://github.com/roxolan/maneige#readme",
+  "dependencies": {
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.4.0",
+    "babel-loader": "^6.2.1",
+    "webpack": "^1.12.11"
+  }
+}

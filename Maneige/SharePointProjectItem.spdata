@@ -5,5 +5,6 @@
     <ProjectItemFile Source="src\app.js" Target="src\" Type="ElementFile" />
     <ProjectItemFile Source="dist\bundle.js" Target="dist\" Type="ElementFile" />
     <ProjectItemFile Source="dist\bundle.js.map" Target="dist\" Type="ElementFile" />
+    <ProjectItemFile Source="src\less\general.less" Target="src\less\" Type="ElementFile" />
   </Files>
 </ProjectItem>

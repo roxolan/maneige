@@ -30,7 +30,7 @@
             <!-- The following content will be replaced with the user name when you run the app - see App.js -->
             initializing...
         </p>
-        <p id="example"></p>
+        <div id="example"></div>
     </div>
 
     <script type="text/javascript" src="../dist/bundle.js"></script>

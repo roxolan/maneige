@@ -4,5 +4,6 @@
     <File Path="src\app.js" Url="src/app.js" ReplaceContent="TRUE" />
     <File Path="dist\bundle.js" Url="dist/bundle.js" ReplaceContent="TRUE" />
     <File Path="dist\bundle.js.map" Url="dist/bundle.js.map" ReplaceContent="TRUE" />
+    <File Path="src\less\general.less" Url="src/less/general.less" ReplaceContent="TRUE" />
   </Module>
 </Elements>

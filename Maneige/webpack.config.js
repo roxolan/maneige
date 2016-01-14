@@ -1,20 +1,20 @@
 ﻿"use strict";
-var webpack = require('webpack');
+var path = require('path');
+require('es6-promise').polyfill()
 
 module.exports = {
-  entry: './src/app.js',
-  /* {
-    app: ['./src/app.js'],
-    vendors: ['react', 'jquery']  
-  }, */
+  // context: __dirname + "/src",
+  // entry: "./app",
+
+  entry: path.resolve(__dirname, 'src/app.js'),
+
+
   output: {
-    filename: "./dist/bundle.js"
+    path: path.resolve(__dirname, 'dist'),
+    // path: __dirname + "/dist",
+    filename: "bundle.js"
   },
-  devServer: {
-    contentBase: ".",
-    host: "localhost",
-    port: 9000
-  },
+
   module: {
     loaders: [
       {
@@ -24,24 +24,11 @@ module.exports = {
         query: {
           presets: ['react', 'es2015']
         }
-      } /*,
-      { test: /jquery\/src\/selector\.js$/, loader: 'amd-define-factory-patcher-loader' },
+      },
       {
-        test: /[\/\\]node_modules[\/\\]jquery[\/\\]index\.js$/,
-        loader: "imports?define=>false"
-      } */
+        test: /\.less$/,
+        loader: "style!css!less"
+      }
     ]
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "windows.jQuery": "jquery"
-    })
-  ],
-  resolve: {
-    alias: {
-      // jquery: "jquery/src/jquery"
-    }
   }
 }

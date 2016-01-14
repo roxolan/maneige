@@ -61,6 +61,7 @@
       <SharePointProjectItemId>{67702304-7099-44af-8452-afd62eeb0519}</SharePointProjectItemId>
       <SubType>Designer</SubType>
     </None>
+    <None Include="src\less\general.less" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-1.9.1.min.map" />

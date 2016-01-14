@@ -5,6 +5,7 @@ require('jquery/src/core/init');
 require('jquery/src/core/ready');
 require('jquery/src/manipulation');
 // require('sizzle');
+require('./less/general.less');
 
 ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");
 

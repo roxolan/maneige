@@ -33,6 +33,6 @@
         <p id="example"></p>
     </div>
 
-    <script src="../dist/bundle.js"></script>
+    <script type="text/javascript" src="../dist/bundle.js"></script>
 
 </asp:Content>

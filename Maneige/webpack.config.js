@@ -2,10 +2,11 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: {
+  entry: './src/app.js',
+  /* {
     app: ['./src/app.js'],
-    vendors: ['react'/*, 'jquery' */]  
-  },
+    vendors: ['react', 'jquery']  
+  }, */
   output: {
     filename: "./dist/bundle.js"
   },
@@ -23,12 +24,12 @@ module.exports = {
         query: {
           presets: ['react', 'es2015']
         }
-      },
+      } /*,
       { test: /jquery\/src\/selector\.js$/, loader: 'amd-define-factory-patcher-loader' },
       {
         test: /[\/\\]node_modules[\/\\]jquery[\/\\]index\.js$/,
         loader: "imports?define=>false"
-      }
+      } */
     ]
   },
   plugins: [

@@ -43,11 +43,20 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="CustomTaskList\CustomTaskListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{470366d2-ca33-42ff-9405-b56bcc85c8f9}</SharePointProjectItemId>
+    </None>
+    <None Include="CustomTaskList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{de9eb7c5-ed9e-41ec-85b3-7b20829438b3}</SharePointProjectItemId>
+    </None>
     <None Include="dist\bundle.js.map" />
     <None Include="packages.config" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{3f0f68d1-03df-4ba6-990e-08ce2ea1af2f}</SharePointProjectItemId>
     </None>
+    <Content Include="CustomTaskList\CustomTaskListInstance\Elements.xml" />
+    <Content Include="CustomTaskList\Elements.xml" />
+    <Content Include="CustomTaskList\Schema.xml" />
     <Content Include="src\app.js" />
     <Content Include="dist\bundle.js" />
     <Content Include="Elements.xml">

@@ -49,11 +49,11 @@
 
 	'use strict';
 	
-	var $ = __webpack_require__(/*! jquery/src/core */ 1 /*'../Scripts/jquery-1.9.1.min.js'*/);
+	var $ = __webpack_require__(/*! jquery/src/core */ 1);
 	__webpack_require__(/*! jquery/src/core/init */ 12);
 	__webpack_require__(/*! jquery/src/core/ready */ 19);
 	__webpack_require__(/*! jquery/src/manipulation */ 23);
-	// require('sizzle');
+	
 	__webpack_require__(/*! ./less/general.less */ 41);
 	
 	ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");

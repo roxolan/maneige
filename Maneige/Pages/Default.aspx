@@ -15,7 +15,7 @@
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
-    Page Title
+    LMS
 </asp:Content>
 
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>
@@ -28,6 +28,18 @@
         </p>
         <div id="example"></div>
     </div>
+
+    <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" ID="full" Title="loc:full">
+        <WebPartPages:XsltListViewWebPart runat="server"
+            ListUrl="Lists/CustomTaskList"
+            IsIncluded="True"
+            JsLink="clientTemplate.js"
+            NoDefaultStyle="TRUE"
+            PageType="PAGE_NORMALVIEW"
+            Default="False"
+            ViewContentTypeId="0x">
+        </WebPartPages:XsltListViewWebPart>
+    </WebPartPages:WebPartZone>
 
     <script type="text/javascript" src="../dist/bundle.js"></script>
 

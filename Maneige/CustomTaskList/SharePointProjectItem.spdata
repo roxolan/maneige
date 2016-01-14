@@ -4,4 +4,7 @@
     <ProjectItemFile Source="Elements.xml" Target="CustomTaskList\" Type="ElementManifest" />
     <ProjectItemFile Source="Schema.xml" Target="CustomTaskList\" Type="ElementFile" />
   </Files>
+  <ExtensionData>
+    <ExtensionDataItem Key="Microsoft.VisualStudio.SharePoint.ListSettings.ListFieldsContentTypeID" Value="0x01003d7570b3a596400aa47427d9aa7a293a" />
+  </ExtensionData>
 </ProjectItem>

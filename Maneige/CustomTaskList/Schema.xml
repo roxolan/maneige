@@ -2,17 +2,52 @@
 <List xmlns:ows="Microsoft SharePoint" Title="CustomTaskList" FolderCreation="FALSE" Direction="$Resources:Direction;" EnableContentTypes="TRUE" Url="Lists/CustomTaskList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
   <MetaData>
     <ContentTypes>
+
+      <ContentType ID="0x01003d7570b3a596400aa47427d9aa7a293a" Name="ListFieldsContentType">
+        <FieldRefs>
+          <FieldRef ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" Name="LinkTitle" />
+          <FieldRef ID="{bc91a437-52e7-49e1-8c4e-4698904b2b6d}" Name="LinkTitleNoMenu" />
+          <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{a8eb573e-9e11-481a-a8c9-1104a54b2fbd}" Name="Priority" />
+          <FieldRef ID="{c15b34c3-ce7d-490a-b133-3f4de8801b76}" Name="Status" />
+          <FieldRef ID="{d2311440-1ed6-46ea-b46d-daa643dc3886}" Name="PercentComplete" />
+          <FieldRef ID="{53101f38-dd2e-458c-b245-0c236cc13d1a}" Name="AssignedTo" />
+          <FieldRef ID="{7662cd2c-f069-4dba-9e35-082cf976e170}" Name="Body" />
+          <FieldRef ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}" Name="StartDate" />
+          <FieldRef ID="{cd21b4c2-6841-4f9e-a23a-738a65f99889}" Name="DueDate" />
+          <FieldRef ID="{ebf1c037-47eb-4355-998d-47ce9f2cc047}" Name="Checkmark" />
+          <FieldRef ID="{B0B3407E-1C33-40ed-A37C-2430B7A5D081}" Name="ActualWork" />
+          <FieldRef ID="{bd7b15dc-ce51-4890-b330-f3a942ce5d4e}" Name="ExternalReference" />
+        </FieldRefs>
+      </ContentType>
       <ContentTypeRef ID="0x0108">
         <Folder TargetName="Task" />
       </ContentTypeRef>
     </ContentTypes>
     <Fields>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <Field Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" DisplayName="$Resources:core,Task_Name;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitle" Type="Computed" />
       <Field Name="LinkTitleNoMenu" ID="{bc91a437-52e7-49e1-8c4e-4698904b2b6d}" DisplayName="$Resources:core,Task_Name;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitleNoMenu" Type="Computed" />
-      <Field Name="Title" ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="$Resources:core,Task_Name;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" Type="Text" />
-      <Field ID="{c3a92d97-2b77-4a25-9698-3ab54874bc6f}" Name="Predecessors" Type="LookupMulti" Mult="TRUE" Required="FALSE" DisplayName="$Resources:core,Tasks_Predecessors;" StaticName="Predecessors" List="Self" ShowField="Title" DisplaceOnUpgrade="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3"></Field>
+      <Field Name="Title" ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="$Resources:core,Task_Name;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" Type="Text" Required="TRUE" />
       <Field ID="{a8eb573e-9e11-481a-a8c9-1104a54b2fbd}" Type="Choice" Name="Priority" DisplayName="$Resources:core,Priority;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Priority">
         <CHOICES>
+
+
+
           <CHOICE>$Resources:core,Priority_High;</CHOICE>
           <CHOICE>$Resources:core,Priority_Normal;</CHOICE>
           <CHOICE>$Resources:core,Priority_Low;</CHOICE>
@@ -26,6 +61,11 @@
       </Field>
       <Field Type="Choice" ID="{c15b34c3-ce7d-490a-b133-3f4de8801b76}" Name="Status" DisplayName="$Resources:core,TaskStatus;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Status">
         <CHOICES>
+
+
+
+
+
           <CHOICE>$Resources:core,Tasks_NotStarted;</CHOICE>
           <CHOICE>$Resources:core,Tasks_InProgress</CHOICE>
           <CHOICE>$Resources:core,Tasks_Completed</CHOICE>
@@ -48,22 +88,37 @@
       <Field ID="{7662cd2c-f069-4dba-9e35-082cf976e170}" Type="Note" RichText="TRUE" RestrictedMode="TRUE" RichTextMode="FullHtml" Name="Body" DisplayName="$Resources:core,Description;" Sortable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Body"></Field>
       <Field ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}" Type="DateTime" Name="StartDate" DisplayName="$Resources:core,Start_Date;" Format="DateOnly" FriendlyDisplayFormat="Relative" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="StartDate"></Field>
       <Field Type="DateTime" ID="{cd21b4c2-6841-4f9e-a23a-738a65f99889}" Name="DueDate" DisplayName="$Resources:core,Due_Date;" Format="DateOnly" FriendlyDisplayFormat="Relative" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DueDate"></Field>
-      <Field Type="Lookup" Indexed="TRUE" Name="ParentID" ID="{fd447db5-3908-4b47-8f8c-a5895ed0aa6a}" Hidden="TRUE" Required="FALSE" List="Self" RelationshipDeleteBehavior="Cascade" ShowField="ID" DisplayName="$Resources:core,Parent_ID;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ParentID"></Field>
       <Field Type="Calculated" Name="Checkmark" ID="{ebf1c037-47eb-4355-998d-47ce9f2cc047}" Required="FALSE" ResultType="Boolean" ReadOnly="TRUE" DisplayName="$Resources:core,Check_Mark_Field;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Checkmark">
         <Formula>=PercentComplete&gt;=1</Formula>
         <FieldRefs>
           <FieldRef Name="PercentComplete" />
         </FieldRefs>
       </Field>
-      <Field Type="RelatedItems" Name="RelatedItems" ID="{d2a04afc-9a05-48c8-a7fa-fa98f9496141}" ShowInDisplayForm="TRUE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" DisplayName="$Resources:core,Related_Links_Field;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RelatedItems"></Field>
-      <Field Type="UserMulti" List="UserInfo" ID="{1982e408-0f94-4149-8349-16f301d89134}" Name="PreviouslyAssignedTo" Mult="TRUE" Hidden="TRUE" DisplayName="$Resources:core,Previously_Assigned_To_Field;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="PreviouslyAssignedTo"></Field>
+      <Field ID="{B0B3407E-1C33-40ed-A37C-2430B7A5D081}" Name="ActualWork" StaticName="ActualWork" SourceID="http://schemas.microsoft.com/sharepoint/v3" DisplayName="$Resources:core,Actual_Work_OL;" Group="$Resources:core,Issue_Task_Columns;" Type="Number" Sealed="TRUE" AllowDeletion="TRUE" />
+      <Field Name="ExternalReference" ID="{bd7b15dc-ce51-4890-b330-f3a942ce5d4e}" DisplayName="Зовнішнє посилання" Type="Text" />
     </Fields>
     <Views>
+
+
+
+
+
+
+
+
+
       <View BaseViewID="0" Type="GANTT">
         <Toolbar Type="Standard" />
         <XslLink Default="TRUE">main.xsl</XslLink>
         <RowLimit Paged="TRUE">100</RowLimit>
         <ViewFields>
+
+
+
+
+
+
+
           <FieldRef Name="LinkTitle"></FieldRef>
           <FieldRef Name="StartDate"></FieldRef>
           <FieldRef Name="DueDate"></FieldRef>
@@ -89,15 +144,22 @@
         <JSLink>clienttemplates.js</JSLink>
         <RowLimit Paged="TRUE">100</RowLimit>
         <ViewFields>
+
+
+
+
           <FieldRef Name="Checkmark"></FieldRef>
           <FieldRef Name="LinkTitle"></FieldRef>
           <FieldRef Name="DueDate"></FieldRef>
           <FieldRef Name="AssignedTo"></FieldRef>
+          <FieldRef Name="ActualWork" />
+          <FieldRef Name="ExternalReference" />
         </ViewFields>
         <ViewData>
           <FieldRef Name="PercentComplete" Type="StrikeThroughPercentComplete"></FieldRef>
           <FieldRef Name="DueDate" Type="TimelineDueDate"></FieldRef>
         </ViewData>
+        <Query />
       </View>
       <View BaseViewID="2" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,Late_Tasks;" MobileView="True" MobileDefaultView="False" Url="late.aspx" ReqAuth="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/issuelst.png?rev=23">
         <Toolbar Type="Standard" />
@@ -106,6 +168,10 @@
         <JSLink>clienttemplates.js</JSLink>
         <RowLimit Paged="TRUE">100</RowLimit>
         <ViewFields>
+
+
+
+
           <FieldRef Name="Checkmark"></FieldRef>
           <FieldRef Name="LinkTitle"></FieldRef>
           <FieldRef Name="DueDate"></FieldRef>
@@ -136,6 +202,8 @@
             </And>
           </Where>
           <OrderBy>
+
+
             <FieldRef Name="DueDate"></FieldRef>
             <FieldRef Name="Priority"></FieldRef>
           </OrderBy>
@@ -148,6 +216,10 @@
         <JSLink>clienttemplates.js</JSLink>
         <RowLimit Paged="TRUE">100</RowLimit>
         <ViewFields>
+
+
+
+
           <FieldRef Name="Checkmark"></FieldRef>
           <FieldRef Name="LinkTitle"></FieldRef>
           <FieldRef Name="DueDate"></FieldRef>
@@ -186,6 +258,10 @@
         <JSLink>clienttemplates.js</JSLink>
         <RowLimit Paged="TRUE">100</RowLimit>
         <ViewFields>
+
+
+
+
           <FieldRef Name="Checkmark"></FieldRef>
           <FieldRef Name="LinkTitle"></FieldRef>
           <FieldRef Name="DueDate"></FieldRef>
@@ -210,6 +286,10 @@
         <JSLink>clienttemplates.js</JSLink>
         <RowLimit Paged="TRUE">100</RowLimit>
         <ViewFields>
+
+
+
+
           <FieldRef Name="Checkmark"></FieldRef>
           <FieldRef Name="LinkTitle"></FieldRef>
           <FieldRef Name="DueDate"></FieldRef>
@@ -238,6 +318,10 @@
         <XslLink Default="TRUE">main.xsl</XslLink>
         <RowLimit Paged="TRUE">100</RowLimit>
         <ViewFields>
+
+
+
+
           <FieldRef Name="Checkmark"></FieldRef>
           <FieldRef Name="LinkTitle"></FieldRef>
           <FieldRef Name="AssignedTo"></FieldRef>
@@ -245,6 +329,7 @@
         </ViewFields>
         <Query>
           <OrderBy>
+
             <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
           </OrderBy>
         </Query>
@@ -255,11 +340,17 @@
         <JSLink>clienttemplates.js</JSLink>
         <RowLimit Paged="TRUE">100</RowLimit>
         <ViewFields>
+
+
+
+
+
+
+
           <FieldRef Name="LinkTitle"></FieldRef>
           <FieldRef Name="StartDate"></FieldRef>
           <FieldRef Name="DueDate"></FieldRef>
           <FieldRef Name="PercentComplete"></FieldRef>
-          <FieldRef Name="Predecessors"></FieldRef>
           <FieldRef Name="AssignedTo"></FieldRef>
           <FieldRef Name="GUID"></FieldRef>
         </ViewFields>
@@ -272,6 +363,7 @@
           <FieldRef Name="ParentID" Type="HierarchyParentID"></FieldRef>
           <FieldRef Name="DueDate" Type="TimelineDueDate"></FieldRef>
         </ViewData>
+        <Query />
       </View>
       <View BaseViewID="9" Type="CALENDAR" WebPartZoneID="Main" DisplayName="$Resources:core,userinfo_schema_calendarview;" MobileView="FALSE" MobileDefaultView="FALSE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/events.png?rev=23" TabularView="FALSE" Url="calendar.aspx" MobileUrl="_layouts/15/mobile/viewdaily.aspx">
         <Toolbar Type="Standard" />
@@ -280,10 +372,13 @@
           <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
         </ParameterBindings>
         <ViewFields>
+
+
+
+
           <FieldRef Name="StartDate"></FieldRef>
           <FieldRef Name="DueDate"></FieldRef>
           <FieldRef Name="Title"></FieldRef>
-          <FieldRef Name="Description" />
         </ViewFields>
         <ViewData>
           <FieldRef Name="Title" Type="CalendarMonthTitle"></FieldRef>
@@ -303,6 +398,23 @@
             </DateRangesOverlap>
           </Where>
         </Query>
+      </View>
+      <View BaseViewID="6" Name="08c785cb-78e7-4663-8dac-0bf70f6471b4" DisplayName="Непризначені завдання" Type="HTML" WebPartZoneID="Main" SetupPath="pages\viewpage.aspx" Url="UnassignedAssignments.aspx">
+        <RowLimit>20</RowLimit>
+        <ViewFields>
+          <FieldRef Name="ID" />
+          <FieldRef Name="Priority" />
+          <FieldRef Name="LinkTitle" />
+          <FieldRef Name="DueDate" />
+          <FieldRef Name="AssignedTo" />
+          <FieldRef Name="Body" />
+          <FieldRef Name="Author" />
+          <FieldRef Name="Created" />
+        </ViewFields>
+        <Query />
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
       </View>
     </Views>
     <Forms>

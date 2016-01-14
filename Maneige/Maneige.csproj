@@ -57,6 +57,7 @@
     <Content Include="CustomTaskList\CustomTaskListInstance\Elements.xml" />
     <Content Include="CustomTaskList\Elements.xml" />
     <Content Include="CustomTaskList\Schema.xml" />
+    <Content Include="Images\AppIcon.png" />
     <Content Include="src\app.js" />
     <Content Include="dist\bundle.js" />
     <Content Include="Elements.xml">
@@ -84,16 +85,6 @@
     <Content Include="Scripts\_references.js" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{a1769192-2ca4-4d7b-8e9b-662beba02873}</SharePointProjectItemId>
-    </None>
-    <Content Include="Content\Elements.xml" />
-    <Content Include="Content\App.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Images\AppIcon.png">
-      <OpcRelationship>manifest-icon</OpcRelationship>
-    </Content>
     <Content Include="Images\Elements.xml">
       <SubType>Designer</SubType>
     </Content>

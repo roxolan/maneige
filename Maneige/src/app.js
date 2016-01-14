@@ -1,10 +1,10 @@
 ﻿'use strict';
 
-var $ = require('jquery/src/core' /*'../Scripts/jquery-1.9.1.min.js'*/);
+var $ = require('jquery/src/core');
 require('jquery/src/core/init');
 require('jquery/src/core/ready');
 require('jquery/src/manipulation');
-// require('sizzle');
+
 require('./less/general.less');
 
 ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");

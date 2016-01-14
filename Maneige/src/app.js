@@ -1,5 +1,5 @@
 ﻿'use strict';
-
+/* 
 var $ = require('jquery/src/core');
 require('jquery/src/core/init');
 require('jquery/src/core/ready');
@@ -38,6 +38,6 @@ function initializePage()
         alert('Failed to get user name. Error:' + args.get_message());
     }
 }
-
+*/
 function requireAll(r) { r.keys().forEach(r); }
 requireAll(require.context('./components/', true, /\.jsx$/));

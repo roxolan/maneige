@@ -29,9 +29,10 @@
         <div id="example"></div>
     </div>
 
+
     <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" ID="full" Title="loc:full">
         <WebPartPages:XsltListViewWebPart runat="server"
-            ListUrl="Lists/CustomTaskList"
+            ListUrl="Lists/List1"
             IsIncluded="True"
             JsLink="clientTemplate.js"
             NoDefaultStyle="TRUE"
@@ -40,6 +41,7 @@
             ViewContentTypeId="0x">
         </WebPartPages:XsltListViewWebPart>
     </WebPartPages:WebPartZone>
+
 
     <script type="text/javascript" src="../dist/bundle.js"></script>
 

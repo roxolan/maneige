@@ -2,6 +2,6 @@
 var ReactDOM = require('react-dom');
 
 ReactDOM.render(
-  <p>Hello, world!</p>,
-document.getElementById('example')
+  <p>Hello, html!</p>,
+document.getElementById('app')
 );

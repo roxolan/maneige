@@ -3,12 +3,12 @@
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
      Name="Maneige"
      ProductID="{3f0f68d1-03df-4ba6-990e-08ce2ea1af2f}"
-     Version="0.0.0.2"
+     Version="0.0.0.3"
      SharePointMinVersion="16.0.0.0"
 >
   <Properties>
     <Title>Maneige</Title>
-    <StartPage>~appWebUrl/Pages/Default.aspx?{StandardTokens}</StartPage>
+    <StartPage>~appWebUrl/Pages/index.html?{StandardTokens}</StartPage>
   </Properties>
 
   <AppPrincipal>

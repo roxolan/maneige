@@ -48,7 +48,7 @@
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{3f0f68d1-03df-4ba6-990e-08ce2ea1af2f}</SharePointProjectItemId>
     </None>
-    <Content Include="app\app.js" />
+    <Content Include="src\app.js" />
     <Content Include="dist\bundle.js" />
     <Content Include="Elements.xml">
       <SubType>Designer</SubType>
@@ -111,7 +111,7 @@
     </AppManifestFile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\components\" />
+    <Folder Include="src\components\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

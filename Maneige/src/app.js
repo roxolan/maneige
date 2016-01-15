@@ -1,11 +1,13 @@
 ﻿'use strict';
+require('./less/general.less');
+
+
 /* 
 var $ = require('jquery/src/core');
 require('jquery/src/core/init');
 require('jquery/src/core/ready');
 require('jquery/src/manipulation');
 
-require('./less/general.less');
 
 ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");
 

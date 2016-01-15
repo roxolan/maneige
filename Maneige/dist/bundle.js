@@ -144,7 +144,9 @@
 	        return React.createElement(
 	            'p',
 	            null,
-	            'Hello from English'
+	            'Hello from English, ',
+	            this.props.name,
+	            '!'
 	        );
 	    }
 	});
@@ -156,14 +158,16 @@
 	        return React.createElement(
 	            'p',
 	            null,
-	            'Вітаємо тепер вже із України!'
+	            'Вітаємо тепер вже із України, ',
+	            this.props.name,
+	            '!'
 	        );
 	    }
 	});
 	
-	ReactDOM.render(React.createElement(GreetEng, null), document.getElementById('app'));
+	ReactDOM.render(React.createElement(GreetEng, { name: 'Victor' }), document.getElementById('app'));
 	
-	ReactDOM.render(React.createElement(GreetUa, null), document.getElementById('message'));
+	ReactDOM.render(React.createElement(GreetUa, { name: 'Віктор' }), document.getElementById('message'));
 	
 	// Make sure the SharePoint script file 'sp.js' is loaded before your
 	// code runs.
@@ -19606,7 +19610,7 @@
 	
 	
 	// module
-	exports.push([module.id, "#app {\n  color: aqua;\n}\n#app {\n  color: blue;\n}\n", ""]);
+	exports.push([module.id, "#app {\n  color: aqua;\n}\n#message {\n  color: blue;\n}\n", ""]);
 	
 	// exports
 

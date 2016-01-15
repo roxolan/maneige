@@ -15,7 +15,7 @@ require('jquery/src/manipulation');
 var GreetEng = React.createClass({
     render: function() {
         return (
-            <p>Hello from English</p>          
+            <p>Hello from English, {this.props.name}!</p>          
         );
     } 
 });
@@ -24,17 +24,17 @@ var GreetEng = React.createClass({
 var GreetUa = React.createClass({
     render: function() {
         return (
-            <p>Вітаємо тепер вже із України!</p>          
+            <p>Вітаємо тепер вже із України, {this.props.name}!</p>          
         );
     } 
 });
 
 ReactDOM.render(
-    <GreetEng/>,
+    <GreetEng name="Victor" />,
     document.getElementById('app'));
 
 ReactDOM.render(
-    <GreetUa/>,
+    <GreetUa name="Віктор"/>,
     document.getElementById('message'));
     
 

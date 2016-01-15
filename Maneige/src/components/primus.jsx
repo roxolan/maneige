@@ -37,6 +37,9 @@ ReactDOM.render(
     <GreetUa name="Віктор"/>,
     document.getElementById('message'));
     
+var nav = new SP.UI.Controls.Navigation("chrome_ctrl_container", {});
+nav.setVisible(true);
+
 
 // Make sure the SharePoint script file 'sp.js' is loaded before your
 // code runs.

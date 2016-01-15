@@ -1,5 +1,7 @@
 ﻿"use strict";
 var path = require('path');
+var webpack = require('webpack');
+
 require('es6-promise').polyfill()
 
 module.exports = {
@@ -30,5 +32,13 @@ module.exports = {
         loader: "style!css!less"
       }
     ]
-  }
+  },
+  
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env": {
+          NODE_ENV: JSON.stringify("production")
+      }
+    })
+  ]
 }

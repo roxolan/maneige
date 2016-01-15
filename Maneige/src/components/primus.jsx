@@ -11,12 +11,30 @@ require('jquery/src/core/ready');
 require('jquery/src/manipulation');
 */
 
+
+var GreetEng = React.createClass({
+    render: function() {
+        return (
+            <p>Hello from English</p>          
+        );
+    } 
+});
+
+
+var GreetUa = React.createClass({
+    render: function() {
+        return (
+            <p>Вітаємо тепер вже із України!</p>          
+        );
+    } 
+});
+
 ReactDOM.render(
-    <p>Hello, html!</p>,
+    <GreetEng/>,
     document.getElementById('app'));
 
 ReactDOM.render(
-    <p>Вітаємо тепер вже із html</p>,
+    <GreetUa/>,
     document.getElementById('message'));
     
 

@@ -4,12 +4,11 @@ var clientContext;
 var website;
 
 require('../less/general.less');
-/*
 var $ = require('jquery/src/core');
 require('jquery/src/core/init');
 require('jquery/src/core/ready');
 require('jquery/src/manipulation');
-*/
+
 
 
 var GreetEng = React.createClass({
@@ -43,7 +42,9 @@ nav.setVisible(true);
 
 // Make sure the SharePoint script file 'sp.js' is loaded before your
 // code runs.
-SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady);
+$(document).ready(function() {
+    SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady);  
+});
 
 // Create an instance of the current context.
 function sharePointReady() {

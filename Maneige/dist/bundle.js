@@ -50,14 +50,12 @@
 	'use strict';
 	
 	
-	/* 
+	// ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");
 	
-	
-	
-	ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");
-	
-	
-	
+	function initializePage() {
+	    console.log('from initializePage and sp.js should get loaded properly')
+	}
+	/*
 	function initializePage()
 	{
 	    var context = SP.ClientContext.get_current();
@@ -90,6 +88,8 @@
 	
 	function requireAll(r) { r.keys().forEach(r); }
 	requireAll(__webpack_require__(/*! ./components/ */ 1));
+	
+
 
 /***/ },
 /* 1 */
@@ -181,20 +181,36 @@
 	        displayName: "Custom Tasks"
 	    }]
 	};
-	var nav = new SP.UI.Controls.Navigation("chrome_ctrl_container", spChromeControlData);
-	nav.setVisible(true);
+	// var nav = new SP.UI.Controls.Navigation("chrome_ctrl_container", spChromeControlData);
+	// nav.setVisible(true);
 	
-	$('#salut').text('Здається, функція .text() працює');
+	SP.SOD.executeOrDelayUntilScriptLoaded(initializePage, "sp.js");
+	
+	function initializePage() {
+	    console.log('from initializePage and sp.js should get loaded properly');
+	}
+	
+	// SP.SOD.executeFunc('sp.js', 'SP.ClientContext', function(){ console.log('simple func works')});
+	
+	// var ctx = new SP.ClientContext();
+	// clientContext = SP.ClientContext.get_current();
+	// console.log('before ready(). new ClientContext is: ' + ctx);
 	
 	// Make sure the SharePoint script file 'sp.js' is loaded before your
 	// code runs.
 	$(document).ready(function () {
-	    SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady);
+	    // SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady); 
+	    // var ctx = new SP.ClientContext();
+	    // clientContext = SP.ClientContext.get_current();
+	    console.log('within ready(). It works');
 	});
 	
+	console.log('before loading sharePointReady function');
+	$('#salut').text('Здається, sharePointReady() так і не запускається');
 	// Create an instance of the current context.
 	function sharePointReady() {
 	    clientContext = SP.ClientContext.get_current();
+	    console.log('within sharePointReady function. clientContext is: ' + clientContext);
 	    website = clientContext.get_web();
 	
 	    clientContext.load(website);

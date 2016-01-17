@@ -22,14 +22,12 @@
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
 
     <div>
-        <p id="message">
-            <!-- The following content will be replaced with the user name when you run the app - see App.js -->
-            initializing...
-        </p>
-        <div id="example"></div>
+        <div id="app"></div>
+        <div id="message"></div>
+        <div id="salut"></div>
     </div>
 
-
+    <%--
     <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" ID="full" Title="loc:full">
         <WebPartPages:XsltListViewWebPart runat="server"
             ListUrl="Lists/List1"
@@ -41,7 +39,7 @@
             ViewContentTypeId="0x">
         </WebPartPages:XsltListViewWebPart>
     </WebPartPages:WebPartZone>
-
+    --%>
 
     <script type="text/javascript" src="../dist/bundle.js"></script>
 

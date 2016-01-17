@@ -1,14 +1,12 @@
 ﻿'use strict';
 
 
-/* 
+// ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");
 
-
-
-ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");
-
-
-
+function initializePage() {
+    console.log('from initializePage and sp.js should get loaded properly')
+}
+/*
 function initializePage()
 {
     var context = SP.ClientContext.get_current();
@@ -41,3 +39,4 @@ function initializePage()
 
 function requireAll(r) { r.keys().forEach(r); }
 requireAll(require.context('./components/', true, /\.jsx$/));
+

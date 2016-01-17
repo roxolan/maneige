@@ -6,7 +6,6 @@ require('es6-promise').polyfill()
 
 module.exports = {
   // context: __dirname + "/src",
-  // entry: "./app",
 
   entry: path.resolve(__dirname, 'src/app.js'),
 
@@ -21,11 +20,18 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
+        include: [
+            path.resolve(__dirname, 'src/components')
+        ],
         exclude: /node_modules/,
         loader: "babel",
         query: {
           presets: ['react', 'es2015']
         }
+      },
+      { 
+        test: /jquery\/src\/selector\.js$/, 
+        loader: 'amd-define-factory-patcher-loader' 
       },
       {
         test: /\.less$/,
@@ -40,5 +46,9 @@ module.exports = {
           NODE_ENV: JSON.stringify("production")
       }
     })
-  ]
+  ] /*,
+  
+  externals: {
+      "jquery": "jQuery"
+  } */
 }

@@ -3,9 +3,6 @@
 
 // ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");
 
-function initializePage() {
-    console.log('from initializePage and sp.js should get loaded properly')
-}
 /*
 function initializePage()
 {

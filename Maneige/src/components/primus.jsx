@@ -1,19 +1,14 @@
-﻿// import * as $ from 'jquery/src/core';
+﻿// import * as $ from 'jquery/src/jquery';
+var $ = require('jquery/src/jquery');
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var clientContext;
+var context;
 var website;
+var user;
+var data;
 
 require('../less/general.less');
-// var jQuery = require('jquery');
-
-var $ = require('jquery/src/jquery');
-// var $ = require('jquery/src/core');
-// require('jquery/src/core/init');
-// require('jquery/src/core/ready');
-// require('jquery/src/manipulation');
-// require('sizzle');
 
 var GreetEng = React.createClass({
     render: function() {
@@ -35,11 +30,11 @@ var GreetUa = React.createClass({
 ReactDOM.render(
     <GreetEng name="Victor" />,
     document.getElementById('app'));
-
+    
+/*    
 ReactDOM.render(
     <GreetUa name="Віктор"/>,
     document.getElementById('message'));
-
 
 // SP Chrome Control Settings
 var spChromeControlData = {
@@ -59,8 +54,8 @@ SP.SOD.executeOrDelayUntilScriptLoaded(initializePage, "sp.js");
 function initializePage() {
     console.log('from initializePage and sp.js should get loaded properly')
 }
+*/
 
-// SP.SOD.executeFunc('sp.js', 'SP.ClientContext', function(){ console.log('simple func works')});
 
 // var ctx = new SP.ClientContext();
 // clientContext = SP.ClientContext.get_current();
@@ -69,27 +64,34 @@ function initializePage() {
 // Make sure the SharePoint script file 'sp.js' is loaded before your
 // code runs.
 $(document).ready(function() {
-    // SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady);  
-    // var ctx = new SP.ClientContext();
-    // clientContext = SP.ClientContext.get_current();
-    console.log('within ready(). It works');    
+    SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady);  
 });
 
-console.log('before loading sharePointReady function');
-$('#salut').text('Здається, sharePointReady() так і не запускається');
 // Create an instance of the current context.
 function sharePointReady() {
-    clientContext = SP.ClientContext.get_current();
-    console.log('within sharePointReady function. clientContext is: ' + clientContext);
-    website = clientContext.get_web();
+    $('#salut').text('Здається, sharePointReady() запустився');
+    context = SP.ClientContext.get_current();
+    website = context.get_web();
+    user = website.get_currentUser();
+    context.load(website);
+    context.load(user);
+    context.executeQueryAsync(onRequestSucceeded, onRequestFailed);
+};
 
-    clientContext.load(website);
-    clientContext.executeQueryAsync(onRequestSucceeded, onRequestFailed);
-}
+
+
 function onRequestSucceeded() {
     // alert(website.get_url());
-
-    $('#salut').text('Вітаємо тепер вже із html, ' + website.get_url());
+    console.log("user object right within onRequestSucceeded:");
+    console.log(user);
+    data = [
+        {name: user.get_title()}
+    ];
+    console.log("Current user Title value is: " + user.get_title() + " -> and as stored in data[0]: " + data[0].name);
+    $('#salut').text('Вітаємо тепер вже із onRequestSucceeded, ' + user.get_title());
+    ReactDOM.render(
+        <GreetUa name={user.get_title()}/>,
+        document.getElementById('message'));
 }
 function onRequestFailed(sender, args) {
     alert('Error: ' + args.get_message());

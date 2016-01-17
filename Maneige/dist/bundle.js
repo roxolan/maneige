@@ -167,7 +167,15 @@
 	
 	ReactDOM.render(React.createElement(GreetUa, { name: 'Віктор' }), document.getElementById('message'));
 	
-	var nav = new SP.UI.Controls.Navigation("chrome_ctrl_container", {});
+	// SP Chrome Control Settings
+	var spChromeControlData = {
+	    appTitle: "neoLMS",
+	    settingsLinks: [{
+	        linkUrl: "Lists/CustomTaskList",
+	        displayName: "Custom Tasks"
+	    }]
+	};
+	var nav = new SP.UI.Controls.Navigation("chrome_ctrl_container", spChromeControlData);
 	nav.setVisible(true);
 	
 	// Make sure the SharePoint script file 'sp.js' is loaded before your

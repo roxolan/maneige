@@ -8,6 +8,7 @@ var website;
 var user;
 var data;
 
+require('./secundus.jsx');
 require('../less/general.less');
 
 var GreetEng = React.createClass({

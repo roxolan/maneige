@@ -8,7 +8,7 @@ require('es6-promise').polyfill()
 module.exports = {
   // context: __dirname + "/src",
 
-  entry: path.resolve(__dirname, 'src/app.js'),
+  entry: path.resolve(__dirname, 'src/main.js'),
   // entry: path.resolve(__dirname, 'src/components/primus.jsx'),
 
   output: {
@@ -19,6 +19,14 @@ module.exports = {
 
   module: {
     loaders: [
+      {
+        test: /.js$/,
+        exclude: node_modules,
+        loader: 'babel',
+        query: {
+          presets: ['react', 'es2015']
+        }
+      },
       {
         test: /\.jsx?$/,
         include: [

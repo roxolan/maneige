@@ -25,6 +25,7 @@
         <div id="app"></div>
         <div id="message"></div>
         <div id="salut"></div>
+        <div id="second"></div>
     </div>
 
     <%--

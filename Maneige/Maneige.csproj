@@ -114,9 +114,7 @@
       <SubType>Designer</SubType>
     </AppManifestFile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\components\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

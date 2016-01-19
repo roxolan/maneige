@@ -1,14 +1,14 @@
-﻿// import * as $ from 'jquery/src/jquery';
-var $ = require('jquery/src/jquery');
+﻿
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Secundus from './secundus.js';
 
-var React = require('react');
-var ReactDOM = require('react-dom');
 var context;
 var website;
 var user;
 var data;
 
-require('./secundus.jsx');
+var $ = require('jquery/src/jquery');
 require('../less/general.less');
 
 var GreetEng = React.createClass({
@@ -27,6 +27,24 @@ var GreetUa = React.createClass({
         );
     } 
 });
+
+
+/*
+class Secundus extends React.Component {
+  render() {
+    console.log('Secundus printing to log');
+    return <p>Secundus, і з класу</p>;
+  }
+}
+
+var Secundus = React.createClass({
+    render: function() {
+        return (
+            <p>Secundus, але не з класу</p>    
+        );
+    }    
+});
+*/  
 
 ReactDOM.render(
     <GreetEng name="Victor" />,
@@ -93,6 +111,11 @@ function onRequestSucceeded() {
     ReactDOM.render(
         <GreetUa name={user.get_title()}/>,
         document.getElementById('message'));
+        
+    ReactDOM.render(
+        <Secundus />, 
+        document.getElementById('second'));
+
 }
 function onRequestFailed(sender, args) {
     alert('Error: ' + args.get_message());

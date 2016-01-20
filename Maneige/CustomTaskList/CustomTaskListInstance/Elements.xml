@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <ListInstance Title="CustomTaskList" OnQuickLaunch="TRUE" TemplateType="171" Url="Lists/CustomTaskList" Description="Instance of custom assignments/tasks list"></ListInstance>
+  <ListInstance Title="Custom Tasks" OnQuickLaunch="TRUE" TemplateType="171" Url="Lists/CustomTaskList" Description="Instance of custom assignments/tasks list"></ListInstance>
 </Elements>

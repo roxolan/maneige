@@ -5,10 +5,25 @@
 
 
 
+
+
       
       
     <ContentType ID="0x01003d7570b3a596400aa47427d9aa7a293a" Name="ListFieldsContentType">
         <FieldRefs>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -68,6 +83,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
       
       
       
@@ -89,6 +117,9 @@
 
 
 
+
+
+
           
           
           
@@ -101,6 +132,11 @@
         <Default>$Resources:core,Priority_Normal;</Default>
       </Field><Field Type="Choice" ID="{c15b34c3-ce7d-490a-b133-3f4de8801b76}" Name="Status" DisplayName="$Resources:core,TaskStatus;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Status">
         <CHOICES>
+
+
+
+
+
 
 
 
@@ -153,6 +189,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
       
       
       
@@ -168,6 +214,13 @@
         <XslLink Default="TRUE">main.xsl</XslLink>
         <RowLimit Paged="TRUE">100</RowLimit>
         <ViewFields>
+
+
+
+
+
+
+
 
 
 
@@ -216,6 +269,12 @@
 
 
 
+
+
+
+
+
+
           
           
           
@@ -235,6 +294,10 @@
         <JSLink>clienttemplates.js</JSLink>
         <RowLimit Paged="TRUE">100</RowLimit>
         <ViewFields>
+
+
+
+
 
 
 
@@ -277,6 +340,8 @@
 
 
 
+
+
             
             
           <FieldRef Name="DueDate"></FieldRef><FieldRef Name="Priority"></FieldRef></OrderBy>
@@ -288,6 +353,10 @@
         <JSLink>clienttemplates.js</JSLink>
         <RowLimit Paged="TRUE">100</RowLimit>
         <ViewFields>
+
+
+
+
 
 
 
@@ -341,6 +410,10 @@
 
 
 
+
+
+
+
           
           
           
@@ -364,6 +437,10 @@
         <JSLink>clienttemplates.js</JSLink>
         <RowLimit Paged="TRUE">100</RowLimit>
         <ViewFields>
+
+
+
+
 
 
 
@@ -407,6 +484,10 @@
 
 
 
+
+
+
+
           
           
           
@@ -414,6 +495,7 @@
         <FieldRef Name="Checkmark"></FieldRef><FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="AssignedTo"></FieldRef><FieldRef Name="Status"></FieldRef></ViewFields>
         <Query>
           <OrderBy>
+
 
 
             
@@ -425,6 +507,12 @@
         <JSLink>clienttemplates.js</JSLink>
         <RowLimit Paged="TRUE">100</RowLimit>
         <ViewFields>
+
+
+
+
+
+
 
 
 
@@ -469,6 +557,9 @@
 
 
 
+
+
+
           
           
           
@@ -502,6 +593,14 @@
 
 
 
+
+
+
+
+
+
+
+
           
           
           
@@ -518,6 +617,7 @@
             </IsNull>
           </Where>
           <OrderBy>
+
 
             
           <FieldRef Name="DueDate" Ascending="TRUE"></FieldRef></OrderBy>

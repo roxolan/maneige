@@ -27,20 +27,10 @@
         <div id="salut"></div>
         <div id="second"></div>
     </div>
-
-    <%--
-    <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" ID="full" Title="loc:full">
-        <WebPartPages:XsltListViewWebPart runat="server"
-            ListUrl="Lists/List1"
-            IsIncluded="True"
-            JsLink="clientTemplate.js"
-            NoDefaultStyle="TRUE"
-            PageType="PAGE_NORMALVIEW"
-            Default="False"
-            ViewContentTypeId="0x">
-        </WebPartPages:XsltListViewWebPart>
-    </WebPartPages:WebPartZone>
-    --%>
+    
+    <p><asp:HyperLink runat="server" 
+    NavigateUrl="JavaScript:window.location = _spPageContextInfo.webAbsoluteUrl + '/Lists/CustomTaskList/AllItems.aspx';" 
+    Text="Custom Tasks" /></p>
 
     <script type="text/javascript" src="../dist/bundle.js"></script>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="RootModule">
-    <File Path="src\app.js" Url="src/app.js" ReplaceContent="TRUE" />
+    <File Path="src\app-vetus.js" Url="src/app-vetus.js" ReplaceContent="TRUE" />
     <File Path="dist\bundle.js" Url="dist/bundle.js" ReplaceContent="TRUE" />
     <File Path="dist\bundle.js.map" Url="dist/bundle.js.map" ReplaceContent="TRUE" />
     <File Path="src\less\general.less" Url="src/less/general.less" ReplaceContent="TRUE" />

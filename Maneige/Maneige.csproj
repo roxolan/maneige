@@ -61,7 +61,7 @@
       <OpcRelationship>manifest-icon</OpcRelationship>
     </Content>
     <Content Include="Pages\index.html" />
-    <Content Include="src\app.js" />
+    <Content Include="src\app-vetus.js" />
     <Content Include="dist\bundle.js" />
     <Content Include="Elements.xml">
       <SubType>Designer</SubType>

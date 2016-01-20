@@ -1,4 +1,4 @@
-﻿'use strict';
+﻿// 'use strict';
 
 
 // ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");
@@ -33,7 +33,3 @@ function initializePage()
 }
 
 */
-
-function requireAll(r) { r.keys().forEach(r); }
-requireAll(require.context('./components/', true, /\.jsx$/));
-

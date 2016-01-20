@@ -68,7 +68,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./primus.js": 2,
+		"./app.js": 2,
 		"./secundus.js": 156
 	};
 	function webpackContext(req) {
@@ -87,9 +87,9 @@
 
 /***/ },
 /* 2 */
-/*!**********************************!*\
-  !*** ./src/components/primus.js ***!
-  \**********************************/
+/*!*******************************!*\
+  !*** ./src/components/app.js ***!
+  \*******************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

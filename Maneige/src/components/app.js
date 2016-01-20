@@ -1,4 +1,4 @@
-﻿
+﻿  
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Secundus from './secundus.js';
@@ -29,31 +29,13 @@ var GreetUa = React.createClass({
 });
 
 
-/*
-class Secundus extends React.Component {
-  render() {
-    console.log('Secundus printing to log');
-    return <p>Secundus, і з класу</p>;
-  }
-}
-
-var Secundus = React.createClass({
-    render: function() {
-        return (
-            <p>Secundus, але не з класу</p>    
-        );
-    }    
-});
-*/  
+  
 
 ReactDOM.render(
     <GreetEng name="Victor" />,
     document.getElementById('app'));
     
-/*    
-ReactDOM.render(
-    <GreetUa name="Віктор"/>,
-    document.getElementById('message'));
+/* 
 
 // SP Chrome Control Settings
 var spChromeControlData = {
@@ -76,10 +58,6 @@ function initializePage() {
 */
 
 
-// var ctx = new SP.ClientContext();
-// clientContext = SP.ClientContext.get_current();
-// console.log('before ready(). new ClientContext is: ' + ctx); 
-
 // Make sure the SharePoint script file 'sp.js' is loaded before your
 // code runs.
 $(document).ready(function() {
@@ -88,7 +66,6 @@ $(document).ready(function() {
 
 // Create an instance of the current context.
 function sharePointReady() {
-    $('#salut').text('Здається, sharePointReady() запустився');
     context = SP.ClientContext.get_current();
     website = context.get_web();
     user = website.get_currentUser();
@@ -100,7 +77,6 @@ function sharePointReady() {
 
 
 function onRequestSucceeded() {
-    // alert(website.get_url());
     console.log("user object right within onRequestSucceeded:");
     console.log(user);
     data = [

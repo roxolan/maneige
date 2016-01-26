@@ -43,10 +43,10 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="CustomTaskList\CustomTaskListInstance\SharePointProjectItem.spdata">
+    <None Include="Lists\CustomTaskList\CustomTaskListInstance\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{470366d2-ca33-42ff-9405-b56bcc85c8f9}</SharePointProjectItemId>
     </None>
-    <None Include="CustomTaskList\SharePointProjectItem.spdata">
+    <None Include="Lists\CustomTaskList\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{de9eb7c5-ed9e-41ec-85b3-7b20829438b3}</SharePointProjectItemId>
     </None>
     <None Include="dist\bundle.js.map" />
@@ -54,9 +54,15 @@
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{3f0f68d1-03df-4ba6-990e-08ce2ea1af2f}</SharePointProjectItemId>
     </None>
-    <Content Include="CustomTaskList\CustomTaskListInstance\Elements.xml" />
-    <Content Include="CustomTaskList\Elements.xml" />
-    <Content Include="CustomTaskList\Schema.xml" />
+    <Content Include="Lists\CustomTaskList\CustomTaskListInstance\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Lists\CustomTaskList\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Lists\CustomTaskList\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Images\AppIcon.png">
       <OpcRelationship>manifest-icon</OpcRelationship>
     </Content>
@@ -102,11 +108,11 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
-    <None Include="Features\Feature1\Feature1.feature">
+    <None Include="Features\SessionComponents\SessionComponents.feature">
       <FeatureId>{adf65a61-c28b-428a-8ba5-a73fcdc1135e}</FeatureId>
     </None>
-    <None Include="Features\Feature1\Feature1.Template.xml">
-      <DependentUpon>Feature1.feature</DependentUpon>
+    <None Include="Features\SessionComponents\SessionComponents.Template.xml">
+      <DependentUpon>SessionComponents.feature</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -114,7 +120,10 @@
       <SubType>Designer</SubType>
     </AppManifestFile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content Types\" />
+    <Folder Include="Site Columns\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

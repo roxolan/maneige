@@ -34,6 +34,8 @@
     NavigateUrl="JavaScript:window.location = _spPageContextInfo.webAbsoluteUrl + '/Lists/CustomTaskList/AllItems.aspx';" 
     Text="Custom Tasks" /></p>
 
+    <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" ID="HomePage1" Title="loc:full" />
+
 
     <script type="text/javascript" src="../dist/bundle.js"></script>
 

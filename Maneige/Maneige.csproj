@@ -52,6 +52,9 @@
       <OpcRelationship>manifest-icon</OpcRelationship>
     </Content>
     <Content Include="Pages\index.html" />
+    <Content Include="Lists\Sessions\Elements.xml" />
+    <Content Include="Lists\Sessions\Schema.xml" />
+    <Content Include="Lists\Sessions\SessionsInstance\Elements.xml" />
     <Content Include="src\app-vetus.js" />
     <Content Include="dist\bundle.js" />
     <Content Include="Elements.xml">
@@ -61,6 +64,12 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Pages\Default.aspx" />
+    <None Include="Lists\Sessions\SessionsInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cbefc450-bd69-4326-855c-cf4266064201}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Sessions\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{894b527e-88f6-425e-8009-f1d62d97f63a}</SharePointProjectItemId>
+    </None>
     <None Include="SharePointProjectItem.spdata">
       <SharePointProjectItemId>{67702304-7099-44af-8452-afd62eeb0519}</SharePointProjectItemId>
       <SubType>Designer</SubType>

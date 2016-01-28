@@ -16,7 +16,7 @@
                     <property name="IsIncluded">True</property>
                     <property name="NoDefaultStyle">True</property>
                     <property name="Title">Hello WebPart</property>
-                    <property name="PageType">PAGE_NORMALVIEW</property>
+                    <property name="PageType">PAGE_DEFAULTVIEW</property>
                     <property name="Default">False</property>
                     <property name="ViewContentTypeId">0x</property>
                   </properties>
